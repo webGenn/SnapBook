@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* login and register  */
+.Ac_box .logo{
+    width: 50%;
+    height: 300px;
+}
+.Ac_box h2{
+    font-size: 35px;
+}
+.Ac_box input{
+    width: 100%;
+    margin: 10px 0 10px 0;
+    height: 40px;
+    line-height: 10px;
+    padding: 10px;
+}
+.Ac_box button{
+    width: 100%;
+    border: 1px solid grey;
+    height: 40px;
+    background-color: #00827F;
+    color: white;
+}
+.Ac_box input[type="submit"]{
+    background-color: #006A4E;
+    color: white;
+    border: 0;
+}
+.Ac_box p{
+    color: gray;
+    font-size: 17px;
+}
+#bio{
+    width: 100%;
+    resize: horizontal;
+    padding: 10px;
+    height: 100px;
+}
+
+/* profilePage code  */
+
+.profile_banner{
+    margin-bottom: 0;
+}
+.profileBanner{
+    width: 100%;
+    height: 400px;
+}
+.profileBox{
+    display: flex;
+    gap: 20px;
+}
+.profileBox .profileImageUser{
+    flex-basis: 30%;
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    border: 12px ridge yellow;
+    border-radius: 50%;
+    position: relative;
+    top: -150px;
+    margin-left: 30px;
+    background-color: #188b6d;
+}
+.profileBox .profileImageUser img{
+    height: 100%;
+    width: 100%;
+}
+.profileBox .profileText{
+    flex-basis: 65%;
+}
+.profileBox .profileTexts h2{
+    margin-top: 10px;
+    font-size: 35px;
+    font-family: "Roboto", sans-serif;
+}
+.profileBox .profileTexts p{
+    font-family: "Poppins";
+}
+.profileBox .profileTexts button{
+    border: 0;
+    background-color: #188b6d;
+    color: white;
+    padding: 10px 30px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+@media screen and (max-width : 620px){
+    .profileBanner{
+        width: 100%;
+        height: 300px;
+    }
+    .profileBox{
+        flex-direction: column;
+        gap: 0;
+    }
+    .profileBox .profileTexts{
+        position: relative;
+        top: -140px;
+        margin-left: 30px;
+    }
+    .profileImageUser{
+        margin: auto;
+    }
+}
+@media screen and (max-width : 400px){
+    .profileBox .profileImageUser{
+        margin-left: 15px;
+    }
+    .profileBox .profileTexts{
+        margin-left: 15px;
+    }
+}
+
+/* showing posts  */
+.post_container{
+    width: 80%;
+    margin: auto;
+}
+.user_post{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.write_post{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f6f4f4;
+}
+.write_post .left_user{
+    display: flex;
+}
+.write_post .right_user a{
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 18px;
+    font-family: "Poppins";
+}
+.write_post .user_image{
+    height: 70px;
+    width: 70px;
+    overflow: hidden;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+.write_post .user_image img{
+    height: 100%;
+    width: 100%;
+}
+.write_post .about_user p{
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: "Poppins";
+}
+.write_post .about_user span{
+    position: relative;
+    top: -17px;
+}
+.image_show{
+    height: 400px;
+    width: 100%;
+}
+.image_show img{
+    height: 100%;
+    width: 100%;
+}
+#caption{
+    margin-top: 15px;
+    font-family: "Roboto";
+}
+.icons{
+    cursor: pointer;
+}
+#like{
+    text-decoration: none;
+}
+
+@media screen and (max-width : 460px){
+    .write_post .user_image{
+        height: 45px;
+        width: 45px;
+        margin-right: 10px;
+    }
+    .write_post .about_user p{
+        margin-top: 0;
+        font-size: 15px;
+    }
+    .write_post .right_user a{
+        font-size: 15px;
+        margin-right: 10px;
+    }
+}
+
+/* usersPost showing on profile page  */
+
+.usersPost{
+    position: relative;
+    top: -100px;
+    width: 90%;
+    margin: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px
+}
+.usersPost .userPostOwn{
+    height: 200px;
+    flex-basis: 20%;
+    overflow: hidden;
+}
+.usersPost .userPostOwn img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+#profileInfoText{
+    position: relative;
+    top: -100px;
+    margin: auto;
+    width: 80%;
+    margin-bottom: 20px;
+    font-size: 33px;
+}
+
+@media screen and (max-width : 894px){
+    .usersPost .userPostOwn{
+        flex-basis: 32%;
+    }
+}
+@media screen and (max-width : 615px){
+    .user_post{
+        column-gap: 30px;
+        margin-left: 20px;
+    }
+    .usersPost .userPostOwn{
+        flex-basis: 47%;
+    }
+}
+@media screen and (max-width : 500px){
+    .usersPost .userPostOwn{
+        flex-basis: 100%;
+    }
+    .usersPost .userPostOwn img{
+        object-fit: contain;
+        display: block;
+        border-radius: 10px;
+    }
+}
+
+#profileNoPost{
+    position: relative;
+    top: -100px;
+    width: 80%;
+    margin: auto;
+}

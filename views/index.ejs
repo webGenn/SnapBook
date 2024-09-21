@@ -1,0 +1,20 @@
+<%- include("./partials/header") %>
+
+<div class="container Ac_box">
+    <center><img src="/images/snapBook_logo.png" alt="logo" class="logo"></center>
+    <h2>Create Account</h2>
+    <form action="/register" method="post" enctype="multipart/form-data">
+        <input type="text" placeholder="Your Name" name="name" required>
+        <input type="email" placeholder="example@gmail.com" name="username" required>
+        <input type="password" placeholder="Enter Password" name="password" required>
+        <input type="number" placeholder="Phone Number" name="phone" required>
+        <input type="file" name="profileImage" hidden id="profileInput" required>
+        <textarea name="bio" id="bio" placeholder="Tell more about yourself..."></textarea>
+        <button id="openProfilePicbtn">Upload Profile Picture</button>
+        <input type="submit" value="Create Account">
+        <p>Already have an account <a href="/login">Login</a></p>
+    </form>
+</div>
+
+
+<%- include("./partials/footer") %>

@@ -1,0 +1,15 @@
+<%- include("./partials/header") %>
+
+<div class="container Ac_box">
+    <center><img src="/images/snapBook_logo.png" alt="logo" class="logo"></center>
+    <h2>Login Account</h2>
+    <form action="/login" method="post">
+        <input type="email" placeholder="example@gmail.com" name="username" required>
+        <input type="password" placeholder="Enter Password" name="password" required>
+        <input type="submit" value="Login Account">
+        <p>Don't have an account <a href="/">Create Account</a></p>
+    </form>
+</div>
+
+
+<%- include("./partials/footer") %>

@@ -1,0 +1,16 @@
+<%- include("./partials/header") %>
+
+<div class="container Ac_box">
+    <center><img src="/images/snapBook_logo.png" alt="logo" class="logo"></center>
+    <h2>Update Profile</h2>
+    <form action="/update" method="post" enctype="multipart/form-data">
+        <input type="text" placeholder="Your Name" name="name" value="<%= user.name %>">
+        <textarea name="bio" id="bio" placeholder="Tell more about yourself..."><%= user.bio %></textarea>
+        <input type="file" name="profileImage" hidden id="profileInput" required>
+        <button id="openProfilePicbtn">Upload Profile Picture</button>
+        <input type="submit" value="Update Account">
+    </form>
+</div>
+
+
+<%- include("./partials/footer") %>

@@ -1,0 +1,31 @@
+<%- include("./partials/header") %>
+
+<div class="profile_banner">
+    <img src="/images/profile_banner.png" alt="bannerImage" class="profileBanner">
+    <div class="profileBox">
+        <div class="profileImageUser"><img src="/images/uploads/<%= user.profileImage %>" alt=""></div>
+        <div class="profileTexts">
+            <h2><%= user.name %></h2>
+            <p><%= user.bio %></p>
+            <a href="/updateProfile"><button>Update Profile</button></a>
+            <a href="/logout"><button>Logout</button></a>
+        </div>
+    </div>
+</div>
+
+<h4 id="profileInfoText">Your Posts</h4>
+
+<% if(user.posts.length > 0){ %>
+    <% user.posts.forEach((post)=>{ %>
+        <div class="usersPost">
+        <div class="userPostOwn">
+            <img src="/images/uploads/<%= post.postImage %>" alt="PostImage">
+        </div>
+        </div>
+    <% }) %>
+<% }else{ %>
+    <p id="profileNoPost">No Posts Yet</p>
+<% } %>
+
+
+<%- include("./partials/footer") %>
